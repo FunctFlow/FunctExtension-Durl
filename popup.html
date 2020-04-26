@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-      }
-    </style>
-  </head>
-  <body>
-    <button id="changeColor"></button>
-    <script src="popup.js"></script>
-  </body>
+
+<head>
+  <style>
+    * {
+      font-family: "Lucida Console", Monaco, monospace;
+      box-sizing: border-box;
+    }
+
+    fieldset {
+      width: 250px;
+      height: 250px;
+      min-width: 0;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    input {
+      width: 90px;
+    }
+
+    textarea {
+      width: 210px;
+      height: 170px;
+      resize: none;
+      overflow: auto;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <fieldset>
+    <legend>DataURL Converter</legend>
+    <input type="file" id="myfile" title=" ">
+    <br><br>
+    <textarea id="myoutput" readonly></textarea>
+  </fieldset>
+</body>
+
+<script>
+  const toBase64 = (file) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  async function Main() {
+    const file = document.querySelector("#myfile").files[0];
+    document.querySelector("#myoutput").innerText = await toBase64(file);
+  }
+  document.querySelector("#myfile").addEventListener("change", () => {
+    document.querySelector("#myoutput").innerText = "Converting... \n\n  It will take longer for larger files ;)";
+    setTimeout(Main, 100);
+  });
+</script>
+
 </html>
