@@ -1,21 +1,25 @@
 {
-  "name": "Durl DataURL Converter",
-  "version": "1.0",
-  "description": "Files to DataURLs on the go!",
   "manifest_version": 2,
-  "page_action": {
-    "default_popup": "popup.html",
+  "name": "Durl DataURL Converter",
+  "description": "Files to DataURLs on the go!",
+  "version": "1.0",
+  "browser_action": {
     "default_icon": {
-      "16": "images/durlImages16.png",
-      "32": "images/durlImages32.png",
-      "48": "images/durlImages48.png",
-      "128": "images/durlImages128.png"
-    }
+      "16": "./images/durlImages16.png",
+      "32": "./images/durlImages32.png",
+      "48": "./images/durlImages48.png",
+      "128": "./images/durlImages128.png"
+    },
+    "default_popup": "./popup.html",
+    "default_title": "Files to DataURLs"
   },
+  "permissions": [
+    "activeTab"
+  ],
   "icons": {
-    "16": "images/durlImages16.png",
-    "32": "images/durlImages32.png",
-    "48": "images/durlImages48.png",
-    "128": "images/durlImages128.png"
+    "16": "./images/durlImages16.png",
+    "32": "./images/durlImages32.png",
+    "48": "./images/durlImages48.png",
+    "128": "./images/durlImages128.png"
   }
 }
