@@ -5,10 +5,8 @@
   "version": "1.0",
   "browser_action": {
     "default_icon": {
-      "16": "./images/durlImages16.png",
-      "32": "./images/durlImages32.png",
-      "48": "./images/durlImages48.png",
-      "128": "./images/durlImages128.png"
+      "128": "./images/durlImages128.png",
+      "48": "./images/durlImages48.png"
     },
     "default_popup": "./popup.html",
     "default_title": "Files to DataURLs"
@@ -17,9 +15,7 @@
     "activeTab"
   ],
   "icons": {
-    "16": "./images/durlImages16.png",
-    "32": "./images/durlImages32.png",
-    "48": "./images/durlImages48.png",
-    "128": "./images/durlImages128.png"
+    "128": "./images/durlImages128.png",
+    "48": "./images/durlImages48.png"
   }
 }
