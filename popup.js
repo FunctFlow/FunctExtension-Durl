@@ -10,6 +10,6 @@ async function Main() {
     document.querySelector("#myoutput").innerText = await toBase64(file);
 }
 document.querySelector("#myfile").addEventListener("change", () => {
-    document.querySelector("#myoutput").innerText = "Converting... \n\n  It will take longer for larger files ;)";
+    document.querySelector("#myoutput").innerText = "Converting...\n\r\n\rIt will take longer for larger files ;)";
     setTimeout(Main, 100);
 });
