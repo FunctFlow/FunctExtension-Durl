@@ -6,16 +6,15 @@
     * {
       font-family: "Lucida Console", Monaco, monospace;
       box-sizing: border-box;
+      color: #1F2833;
     }
 
     html {
       margin: 0px !important;
-      background: transparent;
     }
 
     body {
       margin: 0px !important;
-      background: transparent;
     }
 
     fieldset {
@@ -25,19 +24,35 @@
       text-align: center;
       border-radius: 10px;
       margin: 10px;
+      border: 1px solid #1F2833;
     }
 
     input {
-      width: 90px;
+      display: none;
+    }
+
+    .myfile {
+      display: inline-block;
+      border: 1px solid #1F2833;
+      border-radius: 5px;
+      padding: 3px;
+      background: white;
+      cursor: pointer;
+    }
+
+    .myfile:hover {
+      filter: brightness(130%);
     }
 
     textarea {
+      top: 20px;
       width: 210px;
       height: 170px;
       resize: none;
       overflow: auto;
       border-radius: 5px;
-      margin: 5px
+      margin: 5px;
+      border: 1px solid #1F2833;
     }
   </style>
 </head>
@@ -45,8 +60,8 @@
 <body>
   <fieldset>
     <legend>Durl Converter</legend>
-    <input type="file" id="myfile" title=" ">
-    <br>
+    <input type="file" id="myfile">
+    <label for="myfile" class="myfile">Choose File</label>
     <textarea id="myoutput" readonly></textarea>
     <span>Ctrl + A to select all</span>
   </fieldset>
