@@ -11,6 +11,6 @@ async function Main() {
 }
 
 document.querySelector("#myfile").addEventListener("change", () => {
-    document.querySelector("#myoutput").innerHTML = "Converting...&#013;&#010;&#013;&#010;It will take longer for larger files ;)";
+    document.querySelector("#myoutput").innerText = "Converting...&#013;&#010;&#013;&#010;It will take longer for larger files ;)";
     setTimeout(Main, 100);
 });
