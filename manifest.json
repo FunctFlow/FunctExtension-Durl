@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Functional Extensions: Durl Converter",
   "description": "DataURL Converter on the go!",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "browser_action": {
     "default_icon": {
       "128": "./images/durlImages128.png",
