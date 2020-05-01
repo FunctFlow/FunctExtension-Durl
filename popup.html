@@ -5,6 +5,7 @@
   <style>
     * {
       font-family: "Lucida Console", Monaco, monospace;
+      font-size: 0.9em;
       box-sizing: border-box;
       color: #1F2833;
     }
@@ -34,6 +35,7 @@
     .myfile {
       display: inline-block;
       border: 1px solid #1F2833;
+      width: 210px;
       border-radius: 5px;
       padding: 3px;
       background: white;
@@ -54,25 +56,26 @@
       margin: 5px;
       border: 1px solid #1F2833;
     }
+
+    #myinput {
+      height: 180px;
+    }
   </style>
 </head>
 
 <body>
   <fieldset>
     <input type="file" id="myfile">
-    <legend>
-      <label for="myfile" class="myfile">Choose File to Convert</label>
-    </legend>
+    <legend>File > DataURL</legend>
+    <label for="myfile" class="myfile">Browse Files</label>
     <textarea id="myoutput" readonly></textarea>
     <span>Ctrl + A to select all</span>
   </fieldset>
   <hr>
   <fieldset>
-    <button class="inputconv">
-      <legend>Convert URL to File</legend>
-    </button>
+    <legend>DataURL > File</legend>
     <textarea id="myinput" placeholder="Data URL Goes Here"></textarea>
-    <span>Ctrl + A to select all</span>
+    <button class="myfile">Convert DataURL to File</button>
   </fieldset>
 </body>
 
