@@ -58,14 +58,22 @@
 </head>
 
 <body>
-    <fieldset>
-      <input type="file" id="myfile">
-      <legend>
-        <label for="myfile" class="myfile">Choose File</label>
-      </legend>
-      <textarea id="myoutput" readonly></textarea>
-      <span>Ctrl + A to select all</span>
-    </fieldset>
+  <fieldset>
+    <input type="file" id="myfile">
+    <legend>
+      <label for="myfile" class="myfile">Choose File to Convert</label>
+    </legend>
+    <textarea id="myoutput" readonly></textarea>
+    <span>Ctrl + A to select all</span>
+  </fieldset>
+  <hr>
+  <fieldset>
+    <button class="inputconv">
+      <legend>Convert URL to File</legend>
+    </button>
+    <textarea id="myinput" placeholder="Data URL Goes Here"></textarea>
+    <span>Ctrl + A to select all</span>
+  </fieldset>
 </body>
 
 <script type="text/javascript" src="./popup.js"></script>
