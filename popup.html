@@ -51,7 +51,7 @@
       background: white;
     }
 
-    input {
+    #fileInput {
       display: none;
       border: 1px solid #1F2833;
     }
@@ -60,15 +60,12 @@
 
     .box {
       width: 238px;
+      height: 23px;
       display: inline-block;
       padding: 4px;
       border: 1px solid #1F2833;
       cursor: pointer;
       background: white;
-    }
-
-    .box:hover {
-      filter: brightness(130%);
     }
 
     .fileLabel {
@@ -82,11 +79,14 @@
       height: 192px;
       resize: none;
       border: 1px solid #1F2833;
+      text-align: center;
       overflow: hidden;
     }
 
     .data:focus,
-    .data:active {
+    .data:active,
+    .box:focus,
+    .box:active {
       box-shadow: none;
       outline: none;
       border: 1px solid #1F2833;
@@ -100,15 +100,18 @@
       margin-top: 5px;
       border-radius: 5px 5px 0px 0px;
       margin-bottom: 0;
+      height: 170px;
+    }
+
+    .fileExt {
+      height: 23px;
+      margin-top: -4px;
+      border-radius: 0;
+      border-bottom: 0;
     }
 
     .urlButton {
-      margin-top: -4px;
       border-radius: 0px 0px 5px 5px;
-    }
-
-    .urlButton:focus {
-      outline: 0;
     }
   </style>
 </head>
@@ -125,7 +128,8 @@
       </fieldset>
       <fieldset>
         <legend>DataURL to File</legend>
-        <textarea id="Input" class="data" placeholder="Javascript didnt load! Contact developer!" spellcheck="false"></textarea>
+        <textarea id="Input" class="data" placeholder="Javascript didnt load! Contact developer!"></textarea>
+        <input type="text" class="fileExt box" placeholder="EX: png jpeg exe">
         <button class="urlButton box">Download File</button>
       </fieldset>
     </div>

@@ -1,5 +1,5 @@
 document.querySelector(".data#Output").setAttribute("placeholder", "Click Browse Files\n\nDataURL Will Output Here\n\nOnce Loaded, Click This Textarea To Copy The DataURL");
-document.querySelector(".data#Input").setAttribute("placeholder", "Paste DataURL Here\n\nThen Tap Download File\n\nIt Should Begin Shortly After\n\n\nTHIS IS EXPERIMENTAL\nYou need to type your own extension for the file when downloaded.");
+document.querySelector(".data#Input").setAttribute("placeholder", "Paste DataURL Here\n\nThen Tap Download File\n\nIt Should Begin Shortly After\n\n\nTHIS IS EXPERIMENTAL\nYou need to type your own file extension below. Default is file.txt");
 
 const toBase64 = (file) =>
     new Promise((resolve, reject) => {
@@ -25,7 +25,7 @@ document.querySelector(".data#Output").addEventListener("click", (e) => {
 
 document.querySelector(".urlButton").addEventListener("click", (e) => {
     const el = document.createElement("a");
-    el.download = "file.ext";
+    el.download = "file." + document.querySelector(".fileExt").value || "txt";
     el.href = document.querySelector(".data#Input").value;
     el.style.display = "none";
     document.body.appendChild(el);
