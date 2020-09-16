@@ -1,2 +1,2 @@
-# Durl-Extension
-Google Chrome Extension for converting Files to DataURLs
+# Durl
+Google Chrome Extension for converting Files to Base64 DataURLs
