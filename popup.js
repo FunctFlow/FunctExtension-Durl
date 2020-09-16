@@ -35,6 +35,18 @@ document.querySelector(".baseLeft").addEventListener("click", () => {
 
 document.querySelector(".baseRight").addEventListener("click", () => {
 	var base64el = document.querySelector("#Input");
-	var asciiOutput = window.atob(base64el.value);
+	var asciiOutput = base64el.value;
+	if (isBase64(base64el.value)) {
+		asciiOutput = window.atob(base64el.value);
+	}
 	document.querySelector("#Input").value = asciiOutput;
 });
+
+function isBase64(str) {
+    if (str ==='' || str.trim() ===''){ return false; }
+    try {
+        return btoa(atob(str)) == str;
+    } catch (err) {
+        return false;
+    }
+}
