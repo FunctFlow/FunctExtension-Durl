@@ -1,139 +1,29 @@
 <!DOCTYPE html>
-<html>
 
 <head>
-  <style>
-    * {
-      margin: 0;
-      box-sizing: border-box;
-      text-align: center;
-      font-family: "Lucida Console", Monaco, monospace;
-      font-size: 14.1735px;
-      color: #1f2833;
-      user-select: none;
-    }
-
-    /* Raw */
-    body {
-      text-align: left;
-    }
-
-    div.container {
-      display: inline-block;
-    }
-
-    h3 {
-      margin-top: 5px;
-    }
-
-    div.flexContainer {
-      display: flex;
-    }
-
-    fieldset>* {
-      border-radius: 5px;
-    }
-
-    fieldset {
-      margin: 5px;
-      padding: 0;
-      width: 250px;
-      height: 250px;
-      min-width: 0;
-      border-radius: 10px;
-      border: 1px solid #1F2833;
-      background: silver;
-    }
-
-    legend {
-      padding: 4px;
-      border: 1px solid #1F2833;
-      background: white;
-    }
-
-    #fileInput {
-      display: none;
-      border: 1px solid #1F2833;
-    }
-
-    /* Classes */
-
-    .box {
-      width: 238px;
-      height: 23px;
-      display: inline-block;
-      padding: 4px;
-      border: 1px solid #1F2833;
-      cursor: pointer;
-      background: white;
-    }
-
-    .fileLabel {
-      margin-top: 5px;
-      border-radius: 5px 5px 0px 0px;
-      border-bottom: 0px;
-    }
-
-    .data {
-      width: 238px;
-      height: 192px;
-      resize: none;
-      border: 1px solid #1F2833;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .data:focus,
-    .data:active,
-    .box:focus,
-    .box:active {
-      box-shadow: none;
-      outline: none;
-      border: 1px solid #1F2833;
-    }
-
-    .data#Output {
-      border-radius: 0px 0px 5px 5px;
-    }
-
-    .data#Input {
-      margin-top: 5px;
-      border-radius: 5px 5px 0px 0px;
-      margin-bottom: 0;
-      height: 170px;
-    }
-
-    .fileExt {
-      height: 23px;
-      margin-top: -4px;
-      border-radius: 0;
-      border-bottom: 0;
-    }
-
-    .urlButton {
-      border-radius: 0px 0px 5px 5px;
-    }
-  </style>
+    <link rel="stylesheet" href="./popup.css">
 </head>
 
+<html>
+
 <body>
-  <div class="container">
-    <h3>Durl DataURL Converter</h3>
-    <div class="flexContainer">
-      <fieldset>
-        <legend>File to DataURL</legend>
-        <input type="file" id="fileInput">
-        <label for="fileInput" class="fileLabel box">Browse Files</label>
-        <textarea id="Output" class="data" readonly placeholder="Javascript didnt load! Contact developer!"></textarea>
-      </fieldset>
-      <fieldset>
-        <legend>DataURL to File</legend>
-        <textarea id="Input" class="data" placeholder="Javascript didnt load! Contact developer!" spellcheck="false"></textarea>
-        <input type="text" class="fileExt box" placeholder="EX: png jpeg exe">
-        <button class="urlButton box">Download File</button>
-      </fieldset>
+    <div class="container">
+        <div class="flexContainer">
+            <fieldset>
+                <legend>File to DataURL</legend>
+                <input type="file" id="fileInput">
+                <label for="fileInput" class="fileLabel box">Browse Files</label>
+                <textarea id="Output" class="data" readonly
+                    placeholder="Javascript didnt load! Contact developer!"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Base64 Converter</legend>
+                <textarea id="Input" class="data" placeholder="Input Base64 or Text here!" spellcheck="false"></textarea>
+                <label class="baseButton baseLeft box">To Base64</label>
+                <label class="baseButton baseRight box">To Text</label>
+            </fieldset>
+        </div>
     </div>
-  </div>
 </body>
 
 <script type="text/javascript" src="./popup.js"></script>

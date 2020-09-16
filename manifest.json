@@ -1,10 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "Functional Extensions: Durl Converter",
-  "description": "DataURL Converter on the go!",
-  "version": "2.1.0",
+  "name": "Durl Base64 Converter",
+  "description": "DataURL and Base64 converter on the go!",
+  "version": "3.0.0",
   "browser_action": {
     "default_icon": {
+      "512": "./images/durlImages512.png",
       "128": "./images/durlImages128.png",
       "48": "./images/durlImages48.png"
     },
@@ -12,6 +13,7 @@
     "default_title": "DataURL Converter"
   },
   "icons": {
+    "512": "./images/durlImages512.png",
     "128": "./images/durlImages128.png",
     "48": "./images/durlImages48.png"
   }
